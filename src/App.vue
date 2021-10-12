@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :navLinks="navLinks" />
     <Main/>
     <Footer/>
   </div>
@@ -13,11 +13,45 @@ import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
+  
   components: {
     Header,
     Footer,
     Main
-  }
+  },
+
+  data() {
+    return {
+      
+      // Nav Menu
+      navLinks: [
+        {
+          url: '#',
+          text: 'Home'
+        },
+        {
+          url: '#',
+          text: 'Apple'
+        },
+        {
+          url: '#',
+          text: 'Microsoft'
+        },
+        {
+          url: '#',
+          text: 'Android'
+        },
+        {
+          url: '#',
+          text: 'Forums'
+        },
+        {
+          url: '#',
+          text: 'Contact us'
+        }
+      ]
+    }
+  },
 }
 </script>
 

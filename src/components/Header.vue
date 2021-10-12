@@ -11,7 +11,7 @@
         <!-- nav -->
         <nav>
           <ul>
-            <li v-for="(link, index) in links" :key="index">
+            <li v-for="(link, index) in navLinks" :key="index">
               <a :href="link.url">{{link.text}}</a>
             </li>
           </ul>
@@ -35,37 +35,7 @@
 <script>
 export default {
   name: 'Header',
-  data() {
-    return {
-      links: [
-        {
-          url: '#',
-          text: 'Home'
-        },
-        {
-          url: '#',
-          text: 'Apple'
-        },
-        {
-          url: '#',
-          text: 'Microsoft'
-        },
-        {
-          url: '#',
-          text: 'Android'
-        },
-        {
-          url: '#',
-          text: 'Forums'
-        },
-        {
-          url: '#',
-          text: 'Contact us'
-        }
-      ]
-    }
-  },
-  props: []
+  props: ['navLinks']
 }
 </script>
 
