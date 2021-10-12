@@ -1,0 +1,61 @@
+@import './variables.scss';
+
+/*---------------------- GOOGLE fonts ----------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+/*---------------------- FONTawesome ----------------------*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+
+// ---------------------- RESET ----------------------/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+// ---------------------- COMMON ----------------------/
+body {
+    font-family: 'Lato', sans-serif;
+}
+header {
+    background-color: $mainColor;
+}
+.container {
+    max-width: $sizeContainer;
+    margin: 0 auto;
+    background-color: rgba(77, 107, 107, 0.219);
+    height: 100%;
+}
+
+// ---------------------- buttons style ----------------------/
+.btnStyle {
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.paddingBtn {
+    padding: 15px 30px;
+    font-weight: 900;
+}
+.blackBtn {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    &:hover {
+        transition: 0.3s;
+        background-color: rgb(94, 94, 94);
+        border: 1px solid rgb(94, 94, 94);
+        color: white;
+    }
+}
+.colorBtn {
+    background-color: $mainColor;
+    color: white;
+    border: 1px solid $mainColor;
+    &:hover {
+        transition: 0.3s;
+        background-color: rgb(0, 113, 128);
+        border: 1px solid rgb(0, 113, 128);
+        color: white;
+    }
+}
