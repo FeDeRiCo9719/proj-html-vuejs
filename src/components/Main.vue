@@ -114,7 +114,7 @@ export default {
 // HERO
 .bgHero {
   padding-top: 100px;
-  height: 800px;
+  height: 900px;
   background-color: grey;
   color: white;
 
