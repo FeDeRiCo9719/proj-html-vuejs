@@ -78,6 +78,7 @@ header {
 
         a {
           color: white;
+          transition: 0.2s;
           
           &:hover {
             transition: 0.2s;
@@ -88,6 +89,7 @@ header {
     }
     .fa-search {
       cursor: pointer;
+      transition: 0.2s;
 
       &:hover {
         transition: 0.2s;

@@ -16,7 +16,7 @@
     <!-- DESCRIPTION -->
     <div class="description">
       <div class="container">
-        <h5>AVADA FORUM IS THE PLACE TO BE</h5>
+        <h5 class="h5style">AVADA FORUM IS THE PLACE TO BE</h5>
         <div class="BoxP">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sit odit maiores excepturi quos recusandae ipsam pariatur id eligendi sint qui, ad quibusdam iusto similique soluta ipsum deleniti voluptas temporibus.</p>
         </div>
@@ -24,11 +24,7 @@
     </div>
 
     <!-- LATEST NEWS -->
-    <div class="latestNews">
-      <div class="container">
-        
-      </div>
-    </div>
+    <SectionLatestNews :imagesRow1="imagesRow1" :imagesRow2="imagesRow2" />
 
     <!-- blackBar -->
     <!-- FORUM SECTION -->
@@ -57,9 +53,59 @@
 </template>
 
 <script>
+import SectionLatestNews from './SectionLatestNews.vue'
+
 export default {
   name: 'Main',
-  props: []
+  components: {
+    SectionLatestNews,
+  },
+  props: [],
+  data() {
+    return {
+      imagesRow1: [
+        {
+          img: 'post_feat_img_25-320x202',
+          title: 'Lorem ipsum dolor sit aepe tenetu',
+          date: 'October 11th, 2015 | Comments',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing el torro odit officiis fugiat, quae quas, dolores dicta odio tempore hico aut blanditiis? Consectetur natus, ullam ducimus aliquid quisquam tenetur vel nisi.',
+        },
+        {
+          img: 'post_feat_img_24-320x202',
+          title: 'Lorem ipsum dolor sit aepe tenetu',
+          date: 'October 11th, 2015 | Comments',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing el torro odit officiis fugiat, quae quas, dolores dicta odio tempore hico aut blanditiis? Consectetur natus, ullam ducimus aliquid quisquam tenetur vel nisi.',
+        },
+        {
+          img: 'post_feat_img_23-320x202',
+          title: 'Lorem ipsum dolor sit aepe tenetu',
+          date: 'October 11th, 2015 | Comments',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing el torro odit officiis fugiat, quae quas, dolores dicta odio tempore hico aut blanditiis? Consectetur natus, ullam ducimus aliquid quisquam tenetur vel nisi.',
+        }
+      ],
+
+      imagesRow2: [
+        {
+          img: 'post_feat_img_22-320x202',
+          title: 'Lorem ipsum dolor sit aepe tenetu',
+          date: 'October 11th, 2015 | Comments',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing el torro odit officiis fugiat, quae quas, dolores dicta odio tempore hico aut blanditiis? Consectetur natus, ullam ducimus aliquid quisquam tenetur vel nisi.',
+        },
+        {
+          img: 'post_feat_img_21-320x202',
+          title: 'Lorem ipsum dolor sit aepe tenetu',
+          date: 'October 11th, 2015 | Comments',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing el torro odit officiis fugiat, quae quas, dolores dicta odio tempore hico aut blanditiis? Consectetur natus, ullam ducimus aliquid quisquam tenetur vel nisi.',
+        },
+        {
+          img: 'post_feat_img_20-320x202',
+          title: 'Lorem ipsum dolor sit aepe tenetu',
+          date: 'October 11th, 2015 | Comments',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing el torro odit officiis fugiat, quae quas, dolores dicta odio tempore hico aut blanditiis? Consectetur natus, ullam ducimus aliquid quisquam tenetur vel nisi.',
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -70,8 +116,11 @@ export default {
   padding-top: 100px;
   height: 800px;
   background-color: grey;
-  // background-image: url();
   color: white;
+
+  background-image: url('../assets/img/home_slider_bg.jpg');
+  background-position: center;
+  background-size: 100%;
   
   .container {
     display: flex;
@@ -94,8 +143,8 @@ export default {
 // DESCRIPTION
 .description {
   background-color: rgb(219, 218, 214);
-  height: 300px;
   text-align: center;
+  padding: 100px 0;
 
   .container {
     display: flex;
@@ -104,10 +153,6 @@ export default {
     align-items: center;
     gap: 20px;
 
-    h5 {
-      font-weight: 900;
-    }
-
     .BoxP {
       font-size: 20px;
       max-width: 50%;
@@ -115,12 +160,5 @@ export default {
     }
   }
 }
-
-//LATEST NEWS 
-.latestNews {
-  background-color: white;
-  height: 2000px;
-}
-
 
 </style>
