@@ -39,48 +39,8 @@
           <h2>Forum Sections</h2>
           <hr class="HRstyle">
         </div>
-        <!-- items -->
-        <div class="boxItems">
-          <div class="item centerColumnBox">            
-            <div class="bgCircle centerBox">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h5>News & Community</h5>           
-          </div>
-
-          <div class="item centerColumnBox">            
-            <div class="bgCircle centerBox">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h5>News & Community</h5>           
-          </div>
-          <div class="item centerColumnBox">            
-            <div class="bgCircle centerBox">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h5>News & Community</h5>           
-          </div>
-          
-          <div class="item centerColumnBox">            
-            <div class="bgCircle centerBox">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h5>News & Community</h5>           
-          </div>
-          <div class="item centerColumnBox">            
-            <div class="bgCircle centerBox">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h5>News & Community</h5>           
-          </div>
-          
-          <div class="item centerColumnBox">            
-            <div class="bgCircle centerBox">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h5>News & Community</h5>           
-          </div>             
-        </div>
+        <!-- items -->        
+        <ItemForum :itemsForum="itemsForum"/>
       </div>
     </section>
 
@@ -119,11 +79,13 @@
 
 <script>
 import SectionLatestNews from './SectionLatestNews.vue'
+import ItemForum from './ItemForum.vue'
 
 export default {
   name: 'Main',
   components: {
     SectionLatestNews,
+    ItemForum,
   },
   props: [],
   data() {
@@ -168,6 +130,41 @@ export default {
           date: 'October 11th, 2015 | Comments',
           text: 'Lorem ipsum dolor sit amet consectetur adipisicing el torro odit officiis fugiat, quae quas, dolores dicta odio tempore hico aut blanditiis? Consectetur natus, ullam ducimus aliquid quisquam tenetur vel nisi.',
         }
+      ],
+
+      itemsForum: [
+        {
+          icon: 'fas fa-file-alt',
+          name: 'News & Community',
+        },
+        {
+          icon: 'fab fa-apple',
+          name: 'Apple Forum',
+        },
+        {
+          icon: 'fab fa-windows',
+          name: 'Microsoft Forum',
+        },
+        {
+          icon: 'fab fa-android',
+          name: 'Android Forum',
+        },
+        {
+          icon: 'fas fa-coffee',
+          name: 'General Discussion',
+        },
+        {
+          icon: 'fas fa-cubes',
+          name: 'Apps & Software',
+        },
+        {
+          icon: 'fas fa-laptop',
+          name: 'Gadgets & Stuff',
+        },
+        {
+          icon: 'fas fa-wrench',
+          name: 'Tutorials & Guides',
+        },
       ]
     }
   }
@@ -236,7 +233,6 @@ export default {
 
   .title {
     text-align: center;
-    background-color: rgba(69, 184, 24, 0.363);
 
     h2 {
       font-size: 40px;
@@ -245,35 +241,6 @@ export default {
     }
     hr {
       margin: 0 auto;
-    }
-  }
-  .boxItems {
-    background-color: rgba(181, 184, 24, 0.363);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-
-    .item {
-      background-color: rgba(255, 255, 255, 0.363);
-      border-top: 3px solid rgb(0, 173, 196);
-      width: calc((100% - 120px) / 4);
-      // width: 300px;
-      height: 280px;
-
-      .bgCircle {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background-color: chocolate;
-        color:white;
-        font-size: 24px;
-      }
-      h5 {
-        font-size: 18px;
-        text-align: center;
-        font-weight: 900;
-      }
     }
   }
 }
