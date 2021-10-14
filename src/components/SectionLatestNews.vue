@@ -5,7 +5,7 @@
       <div class="title">
         <h5 class="h5style">PHASELLUS EGET METUS</h5>
         <h2>All the latest news</h2>
-        <hr>
+        <hr class="HRstyle">
       </div>
 
       <!-- ROW IMAGES -->
@@ -63,7 +63,7 @@
         <!-- images -->
         <div class="tutorialsBox">
           <h3>Tutorials & Guides</h3>
-          <hr>
+          <hr class="HRstyle">
           <Tutorial :TutorialsInfo="TutorialsInfo" />
         </div> 
 
@@ -116,12 +116,6 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 80px;
-
-    hr {
-      border-color: rgb(255, 123, 0);
-      width: 80px;
-      height: 1px;
-    }
   }
 
   // title

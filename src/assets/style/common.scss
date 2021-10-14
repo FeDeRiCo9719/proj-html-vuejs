@@ -20,11 +20,29 @@ body {
 header {
     background-color: $mainColor;
 }
+main section {
+    padding: 120px 0;
+}
 .container {
     max-width: $sizeContainer;
     margin: 0 auto;
-    // background-color: rgba(77, 107, 107, 0.219);
+    background-color: rgba(141, 47, 47, 0.219);
     height: 100%;
+}
+.centerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerColumnBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.bgColor {
+    background-color: $bgColor;
 }
 
 // ---------------------- buttons style ----------------------/
@@ -70,3 +88,12 @@ header {
     font-weight: 900;
     letter-spacing: 4px;
 }
+
+// ---------------------- Hr style ----------------------/
+.HRstyle {
+    border-color: rgb(255, 123, 0);
+    width: 80px;
+    height: 1px;
+}
+
+
